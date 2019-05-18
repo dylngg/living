@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>tmux</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="../resources/css/normalize.css">
+        <link rel="stylesheet" href="../resources/css/bare-simplicity.css">
+        <link rel="stylesheet" href="../resources/css/extra.css">
+    </head>
+    <body>
+        <section class="main">
+            <section class="intro">
+                <h1>tmux</h1>
+                <p class="desc">Documents various things with tmux that I can't always remember and features I use/should use. Intended as a reference, not a guide.</p>
+                <span class="date">May 18th, 2019</span>
+            </section>
+            <article>
+
+<h2 id="opening-tmux">Opening tmux</h2>
+<p>You open a new tmux session by running <code>tmux</code>. You can also attach to a existing session using <code>tmux attach</code>. You can detach a window by typing <code>^b d</code> or <code>^b :detach</code> (See below).</p>
+<h2 id="creating-and-modifying-windows-and-panes">Creating and modifying windows and panes</h2>
+<p>The keybindings to create various panes are as follows: (<code>^b</code> must be type immediately before)</p>
+<table>
+<thead>
+<tr class="header">
+<th>Keybinding</th>
+<th>What does it do?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>%</code></td>
+<td>Opens a pane on the right side (taking up half the space) of the active window</td>
+</tr>
+<tr class="even">
+<td><code>"</code></td>
+<td>Opens a pane on the bottom side (taking up half the space) of the active window</td>
+</tr>
+<tr class="odd">
+<td><code>c</code></td>
+<td>Opens a new window to the right (and switches to it). You can also use <code>:new-window</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="switching-windows-and-panes">Switching windows and panes</h2>
+<p>The easiest way to switch between panes is to use the following keybindings: <code>^b &lt;arrowkey&gt;</code>, where <code>&lt;arrowkey&gt;</code>. The easiest way to switch between windows is by using <code>^b n</code> and <code>^b p</code> (which switches to the next and previous windows).</p>
+<table>
+<thead>
+<tr class="header">
+<th>Keybinding</th>
+<th>What does it do?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>^o</code></td>
+<td>Rotates the panes in the current window forwards</td>
+</tr>
+<tr class="even">
+<td><code>0-9</code></td>
+<td>Switches to the indexed window (check the bottom for a number)</td>
+</tr>
+<tr class="odd">
+<td><code>'</code></td>
+<td>Prompts for the indexed window to switch to (check the bottom for a number)</td>
+</tr>
+<tr class="even">
+<td><code>;</code></td>
+<td>Move to the previously active pane</td>
+</tr>
+<tr class="odd">
+<td><code>l</code></td>
+<td>Move to the previously active window</td>
+</tr>
+<tr class="even">
+<td><code>!</code></td>
+<td>Moves the current pane into a new window</td>
+</tr>
+<tr class="odd">
+<td><code>{</code></td>
+<td>Swaps the current pane with the previous pane</td>
+</tr>
+<tr class="even">
+<td><code>}</code></td>
+<td>Swaps the current pane with the next pane</td>
+</tr>
+</tbody>
+</table>
+<h3 id="killing-windows-and-panes">Killing windows and panes</h3>
+<p>You can kill a pane with <code>^b x</code> and a window with <code>^b &amp;</code>.</p>
+<h2 id="scrolling-and-copying">Scrolling and Copying</h2>
+<p>You can enter copy mode (which allows you to scroll) by running <code>^b [</code>. There you can scroll up and down (vim keybindings even work!).</p>
+<h2 id="sources">Sources</h2>
+<p>You can contribute to this document <a href="https://github.com/dylngg/living/tmux">here</a> by opening a merge request or an issue. Any and all contributions, as well as feedback, is welcome.</p>
+<p><a href="http://man.openbsd.org/OpenBSD-current/man1/tmux.1">http://man.openbsd.org/OpenBSD-current/man1/tmux.1</a> (<code>man tmux 1</code>) <a href="https://leanpub.com/the-tao-of-tmux/read">https://leanpub.com/the-tao-of-tmux/read</a></p>
+            </article>
+            <a href="#">goto top;</a>
+        </section>
+    </body>
+</html>
