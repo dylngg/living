@@ -7,6 +7,10 @@ blockquote {
   padding-left: 2rem;
   border-left: .75px solid #5D707C;
 }
+td, th {
+  padding: 5px;
+  text-align: left;
+}
 .intro h1 {
   margin-bottom: .5rem;
 }
