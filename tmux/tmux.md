@@ -37,7 +37,7 @@ You can enter copy mode (which allows you to scroll) by running `^b [`. There yo
 
 ## Sources
 
-You can contribute to this document [here](https://github.com/dylngg/living/tmux) by opening a merge request or an issue. Any and all contributions, as well as feedback, is welcome.
+You can contribute to this document [here](https://github.com/dylngg/living/tree/master/tmux) by opening a merge request or an issue. Any and all contributions, as well as feedback, is welcome.
 
 <http://man.openbsd.org/OpenBSD-current/man1/tmux.1> (`man 1 tmux`)
 <https://leanpub.com/the-tao-of-tmux/read>
