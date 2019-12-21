@@ -11,6 +11,7 @@ The keybindings to create various panes are as follows: (`^b` must be type immed
 | `%` | Opens a pane on the right side (taking up half the space) of the active window |
 | `"` | Opens a pane on the bottom side (taking up half the space) of the active window |
 | `c` | Opens a new window to the right (and switches to it). You can also use `:new-window` |
+| `,` | Renames the current window. You can also use `:rename-window` |
 
 ## Switching windows and panes
 
