@@ -13,12 +13,14 @@
             <section class="intro">
                 <h1>tmux</h1>
                 <p class="desc">Documents various things with tmux that I can't always remember and features I use/should use. Intended as a reference, not a guide.</p>
-                <span class="date">December 21st, 2019</span>
+                <span class="date">March 1st, 2020</span>
             </section>
             <article>
 
 <h2 id="opening-tmux">Opening tmux</h2>
 <p>You open a new tmux session by running <code>tmux</code>. You can also attach to a existing session using <code>tmux attach</code>. You can detach a window by typing <code>^b d</code> or <code>^b :detach</code> (See below).</p>
+<h2 id="vi-vs-emacs-key-bindings">Vi vs Emacs Key Bindings</h2>
+<p>There are two different options for keybindings in tmux: vi and emacs. The default when you start up is emacs unless <code>EDITOR</code> or <code>VISUAL</code> contains "vi", in which case vi keybindings are set. You can override this in <code>~/.tmux.conf</code> via <code>set-window-option -g mode-keys vi</code> or <code>set-window-option -g mode-keys emacs</code>.</p>
 <h2 id="creating-and-modifying-windows-and-panes">Creating and modifying windows and panes</h2>
 <p>The keybindings to create various panes are as follows: (<code>^b</code> must be type immediately before)</p>
 <table>
@@ -94,10 +96,54 @@
 <h3 id="killing-windows-and-panes">Killing windows and panes</h3>
 <p>You can kill a pane with <code>^b x</code> and a window with <code>^b &amp;</code>.</p>
 <h2 id="scrolling-and-copying">Scrolling and Copying</h2>
-<p>You can enter copy mode (which allows you to scroll) by running <code>^b [</code>. There you can scroll up and down (vim keybindings even work!).</p>
+<p>You can enter copy mode (which allows you to scroll) by running <code>^b [</code>. In this mode you can scroll up and down and see lines past your viewport (vim's hjll movement works in when in vi mode!). To copy text in vi mode you'd hit the <code>&lt;space&gt;</code> bar to start a selection and in emacs mode you'd do a <code>^&lt;space&gt;</code> (ctl-spacebar) combo. At this point you can use the arrow keys to select the text you want to copy. Once satistifed with your selection, hit <code>&lt;enter/return&gt;</code> if in vi mode or <code>&lt;alt&gt;-w</code> in emacs mode and the selection will be copied into tmux's buffer. To paste what's in the current buffer do <code>^b ]</code>.</p>
+<p>In summary:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Mode</th>
+<th>Keybinding</th>
+<th>What does it do?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>vi/emacs</td>
+<td><code>^b [</code></td>
+<td>Enters copy mode.</td>
+</tr>
+<tr class="even">
+<td>vi</td>
+<td><code>&lt;space&gt;</code></td>
+<td>Allows you to start a selection (in copy mode).</td>
+</tr>
+<tr class="odd">
+<td>emacs</td>
+<td><code>^&lt;space&gt;</code></td>
+<td>Allows you to start a selection (in copy mode).</td>
+</tr>
+<tr class="even">
+<td>vi</td>
+<td><code>&lt;enter/return&gt;</code></td>
+<td>Copies the selection into tmux's buffer (after selecting in in copy mode).</td>
+</tr>
+<tr class="odd">
+<td>emacs</td>
+<td><code>&lt;alt&gt;-w</code></td>
+<td>Copies the selection into tmux's buffer (after selecting in in copy mode).</td>
+</tr>
+<tr class="even">
+<td>vi/emacs</td>
+<td><code>^b ]</code></td>
+<td>Pastes tmux's buffer.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="sources">Sources</h2>
 <p>You can contribute to this document <a href="https://github.com/dylngg/living/tree/master/tmux">here</a> by opening a merge request or an issue. Any and all contributions, as well as feedback, is welcome.</p>
-<p><a href="http://man.openbsd.org/OpenBSD-current/man1/tmux.1">http://man.openbsd.org/OpenBSD-current/man1/tmux.1</a> (<code>man 1 tmux</code>) <a href="https://leanpub.com/the-tao-of-tmux/read">https://leanpub.com/the-tao-of-tmux/read</a></p>
+<p><a href="http://man.openbsd.org/OpenBSD-current/man1/tmux.1">http://man.openbsd.org/OpenBSD-current/man1/tmux.1</a> (<code>man 1 tmux</code>)</p>
+<p><a href="https://leanpub.com/the-tao-of-tmux/read">https://leanpub.com/the-tao-of-tmux/read</a></p>
+<p><a href="https://awhan.wordpress.com/2010/06/20/copy-paste-in-tmux/">https://awhan.wordpress.com/2010/06/20/copy-paste-in-tmux/</a></p>
             </article>
             <a href="#">goto top;</a>
         </section>
