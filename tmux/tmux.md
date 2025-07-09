@@ -53,7 +53,7 @@ In summary:
 
 ## Sources
 
-You can contribute to this document [here](https://github.com/dylngg/living/tree/master/tmux) by opening a merge request or an issue. Any and all contributions, as well as feedback, is welcome.
+You can contribute to this document [here](https://github.com/dylngg/living/tree/master/tmux) by opening a merge request or an issue.
 
 <http://man.openbsd.org/OpenBSD-current/man1/tmux.1> (`man 1 tmux`)
 

@@ -99,7 +99,7 @@ if [ ! -f $footer_filepath ]; then
 fi
 
 cat $header_filepath > $html_filepath
-pandoc -f gfm -t html $md_filepath >> $html_filepath
+pandoc -f gfm -t html --wrap=none $md_filepath >> $html_filepath
 cat $footer_filepath >> $html_filepath
 
 meta_filepath="$pagedir/$pagename.meta"

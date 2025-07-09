@@ -1,11 +1,14 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>tmux: Dylan's Living Docs</title>
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
-        <link rel="stylesheet" href="../resources/css/normalize.css">
-        <link rel="stylesheet" href="../resources/css/bare-simplicity.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
+
+        <link rel="stylesheet" href="/css/normalize.min.css">
+        <link rel="stylesheet" href="/css/bare-simplicity.css">
         <link rel="stylesheet" href="../resources/css/extra.css">
     </head>
     <body>
@@ -26,25 +29,25 @@
 <p>The keybindings to create various panes are as follows: (<code>^b</code> must be type immediately before)</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>Keybinding</th>
 <th>What does it do?</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td><code>%</code></td>
 <td>Opens a pane on the right side (taking up half the space) of the active window</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>"</code></td>
 <td>Opens a pane on the bottom side (taking up half the space) of the active window</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>c</code></td>
 <td>Opens a new window to the right (and switches to it). You can also use <code>:new-window</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>,</code></td>
 <td>Renames the current window. You can also use <code>:rename-window</code></td>
 </tr>
@@ -54,41 +57,41 @@
 <p>The easiest way to switch between panes is to use the following keybindings: <code>^b &lt;arrowkey&gt;</code>, where <code>&lt;arrowkey&gt;</code>. The easiest way to switch between windows is by using <code>^b n</code> and <code>^b p</code> (which switches to the next and previous windows).</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>Keybinding</th>
 <th>What does it do?</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td><code>^o</code></td>
 <td>Rotates the panes in the current window forwards</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>0-9</code></td>
 <td>Switches to the indexed window (check the bottom for a number)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>'</code></td>
 <td>Prompts for the indexed window to switch to (check the bottom for a number)</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>;</code></td>
 <td>Move to the previously active pane</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>l</code></td>
 <td>Move to the previously active window</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>!</code></td>
 <td>Moves the current pane into a new window</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>{</code></td>
 <td>Swaps the current pane with the previous pane</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>}</code></td>
 <td>Swaps the current pane with the next pane</td>
 </tr>
@@ -101,39 +104,39 @@
 <p>In summary:</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>Mode</th>
 <th>Keybinding</th>
 <th>What does it do?</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>vi/emacs</td>
 <td><code>^b [</code></td>
 <td>Enters copy mode.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>vi</td>
 <td><code>&lt;space&gt;</code></td>
 <td>Allows you to start a selection (in copy mode).</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>emacs</td>
 <td><code>^&lt;space&gt;</code></td>
 <td>Allows you to start a selection (in copy mode).</td>
 </tr>
-<tr class="even">
+<tr>
 <td>vi</td>
 <td><code>&lt;enter/return&gt;</code></td>
 <td>Copies the selection into tmux's buffer (after selecting in in copy mode).</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>emacs</td>
 <td><code>&lt;alt&gt;-w</code></td>
 <td>Copies the selection into tmux's buffer (after selecting in in copy mode).</td>
 </tr>
-<tr class="even">
+<tr>
 <td>vi/emacs</td>
 <td><code>^b ]</code></td>
 <td>Pastes tmux's buffer.</td>
@@ -141,7 +144,7 @@
 </tbody>
 </table>
 <h2 id="sources">Sources</h2>
-<p>You can contribute to this document <a href="https://github.com/dylngg/living/tree/master/tmux">here</a> by opening a merge request or an issue. Any and all contributions, as well as feedback, is welcome.</p>
+<p>You can contribute to this document <a href="https://github.com/dylngg/living/tree/master/tmux">here</a> by opening a merge request or an issue.</p>
 <p><a href="http://man.openbsd.org/OpenBSD-current/man1/tmux.1">http://man.openbsd.org/OpenBSD-current/man1/tmux.1</a> (<code>man 1 tmux</code>)</p>
 <p><a href="https://leanpub.com/the-tao-of-tmux/read">https://leanpub.com/the-tao-of-tmux/read</a></p>
 <p><a href="https://awhan.wordpress.com/2010/06/20/copy-paste-in-tmux/">https://awhan.wordpress.com/2010/06/20/copy-paste-in-tmux/</a></p>
